@@ -1,4 +1,3 @@
-# myBlog
-My portfolio site which I've built complete from scratch and modified since college.
-It started as a simple HTML page hosted on a Raspberry Pi,  now it's a 
-Cloud-Hosted Angular application with a ktor backend for database connections.
+# My Portfolio Site
+Angular 14 & Ktor 2
+I started from scratch with an HTML page on a raspberry pi and today it is a cloud-hosted docker stack.
