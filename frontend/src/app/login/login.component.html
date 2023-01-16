@@ -1,0 +1,15 @@
+<div class="body" style="min-height: 100%">
+  <div class="login container">
+    <h1>Authorization Required</h1>
+    <div class="alert-primary p-5" *ngIf="submitted">{{message}}</div>
+    <form #userForm="ngForm">
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="user name" [(ngModel)]="name" name="name">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" placeholder="password" [(ngModel)]="password" name="password">
+      </div>
+      <input type="submit" value="Login" (click)="onSubmit()">
+    </form>
+  </div>
+</div>

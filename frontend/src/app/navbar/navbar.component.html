@@ -1,0 +1,54 @@
+<div class="header">
+  <div class="login-button">
+    <button (click)="navigateToAdmin()">{{ isLoggedIn ? 'Admin' : 'Login' }}</button>
+    <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+  </div>
+
+
+  <div class="container">
+    <nav class="navbar navbar-expand-sm fixed-top" role="navigation"
+         style="background-color: rgba(45,47,47,0.87);">
+
+      <a class="navbar-brand" (click)="navigateToHome()"><img src="assets/img/MH_Logo.png" alt="Homepage" class="img-responsive"></a><br><br>
+
+      <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div [(ngbCollapse)]="navbarCollapsed" class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link link" (click)="navigateToAbout()">ABOUT</a><br>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" (click)="navigateToPortfolio()">PORTFOLIO</a><br>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" (click)="navigateToContact()">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="body">
+    <!--Waves Container-->
+    <div class="rotated">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           viewBox="-2 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-162 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="46" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="46" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="46" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="46" y="7" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
+
+  </div>
+
+</div>

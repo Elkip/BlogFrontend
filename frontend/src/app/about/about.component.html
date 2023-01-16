@@ -1,0 +1,284 @@
+<div class="body" xmlns="http://www.w3.org/1999/html">
+  <div class="title text-center">
+    <img class="images" src="assets/img/me_circle.png" alt="Me" style="width: 20rem;">
+    <b><h2>Hello, My name is Mitch</h2></b>
+  </div>
+  <br/>
+  <div class="main">
+    <div class="container" id="intro">
+      <p>In 2020, I received an award for excellence in the field of Data Science when I finished my Bachelor's at Eastern Michigan University.
+        In August 2023, I will finish my Master's Degree in Applied Biostatistics at the University of Boston.
+        I am pursing a career in public health research or pharmaceuticals so that I can improve the function and operations
+        of teams who are making a positive impact in the world. I am particularly interested in the study of rheumatology
+        and auto-immune diseases that cause vasculitis.</p>
+      <br>
+      <div class="list-right">
+        <h2>Academic Interests:</h2>
+        <ul>
+          <li>Storage and Application of Big Data</li>
+          <li>Machine Learning and Predictive Analysis</li>
+          <li>Cyber Security and System Administration</li>
+          <li>Relational and Non-relational Database Design</li>
+          <li>Website and Web Application Development</li>
+          <li>Linux and Open Source Software</li>
+        </ul>
+        <h2>Personal Interests:</h2>
+        <ul>
+          <li>Programming</li>
+          <li>Video Games</li>
+          <li>Going to Concerts</li>
+          <li>Listening to Music</li>
+          <li>Reading</li>
+        </ul>
+      </div>
+    </div>
+    <br/>
+    <hr>
+    <br/>
+    <button id="btn" class="coolBeans" (click)="hideResume()">Show Resume</button>
+    <br /><br />
+    <div class="container" id="resume" style="display:none;">
+      <div class="resume-title">Education</div>
+      <div class="education">
+        <b>
+          <P>
+            Master of Science (Expected August 2023)
+            <br>
+            Boston University School of Public Health, Boston
+          </P>
+          <div class="education-content">
+            <p>Applied Biostatistics
+          </div>
+        </b>
+      </div>
+      <div class="education">
+        <b>
+          <P>
+            Bachelor of Science (December 2019)
+            <br>
+            Eastern Michigan University, Ypsilanti
+          </P>
+          <div class="education-content">
+            <p>Data Science and Analysis with Concentration on Theory
+              <br/>
+              3.72 GPA
+              <br/>
+              Magna Cum Laude
+              <br/>Outstanding Senior Award for Excellence in Data Science</p>
+          </div>
+        </b>
+      </div>
+      <div class="resume-title">Skills</div>
+      <div class="skills-box">
+        <div class="skills-content">
+          <ul>Data Analysis</ul>
+          <li>Data Mining</li>
+          <li>Data Visualization with R</li>
+          <li>Predictive Modeling</li>
+          <li>Machine Learning with Pytorch</li>
+          <li>Logistic Regression</li>
+        </div>
+        <div class="skills-content">
+          <ul>Database Design</ul>
+          <li>SQL & NoSQL</li>
+          <li>ER & UML Diagrams</li>
+          <li>Data Normalization</li>
+          <li>Disaster Recovery</li>
+          <li>Security & Performance</li>
+        </div>
+        <div class="skills-content">
+        </div>
+        <div class="skills-content">
+          <ul>System Administration</ul>
+          <li>Linux & Docker</li>
+          <li>Web Server Hosting</li>
+          <li>Netsuite & Salesforce</li>
+          <li>Amazon AWS</li>
+          <li>Redhat JBOSS EAP & IBM Websphere</li>
+        </div>
+        <div class="skills-content">
+          <ul>Languages</ul>
+          <li>R</li>
+          <li>Java/Kotlin</li>
+          <li>Python</li>
+          <li>Angular</li>
+          <li>Shell Scripting</li>
+        </div>
+      </div>
+      <div class="resume-title">Experience</div>
+      <mat-tab-group>
+        <mat-tab label="Boston University School of Public Health">
+          <div class="resume-header">Research Assistant</div>
+          <div class="resume-subheader"><a href="https://www.bu.edu/sph/profile/michael-lavalley/" target="_blank">Under the leadership of Dr. Mike LaValley</a></div>
+          <div class="resume-subheader">Dec 2022 - Present</div>
+          <hr>
+          <div class="resume-content">
+            <li>Contributed to the identification of clusters in a large dataset of patients who received knee replacements surgeries</li>
+            <li> Performed survival analysis in R to develop a predictive model for if and when a knee replacement surgery is needed
+              in patients with osteoarthritis based on their demographics and clinical characteristics</li>
+          </div>
+        </mat-tab>
+        <mat-tab label="Blue Care Network of MI">
+          <div class="resume-header">System Analyst</div>
+          <div class="resume-subheader"><a href="https://www.bcbsm.com/" target="_blank">Blue Care Network of MI</a></div>
+          <div class="resume-subheader">Mar 2020 - Jun 2022</div>
+          <hr>
+          <div class="resume-content">
+            <li>Maintained and performed analysis on web applications and services supporting the largest health insurance network in the state</li>
+            <li>Rotated 24/7 oncall support monitoring ongoing issues in critical backend systems for processing of insurance claims and enrollment</li>
+            <li>Provided support across the company by writing and testing new features for a variety of systems across a large software portfolio</li>
+            <li>Resolved issues in Spring Boot/Batch systems and JBoss EAP hosted apps after a database migration from Sybase to MS SQL Server</li>
+            <li>Troubleshot user access issues with LDAP directory servers and OKTA</li>
+            <li>Automated the import of SSL certificates to keystore via bash scripts</li>
+            <li>Created Maven archetypes using reactive Java libraries for asynchronous RDBMS usage with RESTful web services</li>
+          </div>
+        </mat-tab>
+        <mat-tab label="National Food Group">
+          <div class="resume-header">IT Netsuite Intern</div>
+          <div class="resume-subheader"><a href="https://www.nationalfoodgroup.com/" target="_blank">National Food Group</a></div>
+          <div class="resume-subheader">Oct 2019 - Feb 2020</div>
+          <hr>
+          <div class="resume-content">
+            <li>Administered Netsuite user accounts and permissions</li>
+            <li>Developed and Tested workflows and JS scripts based on saved search conditions to handle automation of reporting</li>
+            <li>Designed KPI’s, reports, and portlets for employee dashboards</li>
+            <li>Tracked inventory for specific items in different warehouses over time with interactive charts using DS.js and a Python data scraper</li>
+            <li>Implemented new NetSuite features by communicating with other departments on their needs</li>
+            <li>Preformed data modeling for productivity improvement and marketing</li>
+          </div>
+        </mat-tab>
+        <mat-tab label="Blue Cross Blue Shield of MI">
+          <div class="resume-header">Operations Intern</div>
+          <div class="resume-subheader"><a href="https://www.bcbsm.com/" target="_blank">Blue Cross Blue Shield of MI</a></div>
+          <div class="resume-subheader">May 2019 - Aug 2019</div>
+          <hr>
+          <div class="resume-content">
+            <li>Analyzed incoming applications with regular reports via MS Access</li>
+            <li>Assigned system permissions to current and new employees</li>
+            <li>Created and administered a SharePoint employee feedback page</li>
+            <li>Organized reporting queries with a MS Access UI</li>
+            <li>Automated mail categorization with Excel using VBA and VLOOKUP</li>
+          </div>
+        </mat-tab>
+        <mat-tab label="Kaiser Optical">
+          <div class="resume-header">Sales intern</div>
+          <div class="resume-subheader"><a href="https://kosi.com/" target="_blank">Kaiser Optical Systems, Inc.</a></div>
+          <div class="resume-subheader">Jun 2016 - Sep 2016</div>
+          <hr>
+          <div class="resume-content">
+            <li>Ran quantitative analyses and diagnosed problems on RAMAN spectrographs</li>
+            <li>Updated online database of inventory using SalesForce, Agile, and Filemaker Pro</li>
+            <li>Installed software and diagnosed issues with systems heading to demo</li>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <br/>
+    <hr>
+    <br/>
+    <div id="faq" class="container">
+    <div class="container-right">
+      <mat-card class="basic-card">
+        <mat-card-header>
+          <mat-card-title>
+            What do I do for a living?
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>I am a Full Stack Data Scientist. I've had a variety of jobs in the Tech Industry, which has given me
+            experience in DevOps and frontend and backend development. I have the technical ability to develop and
+            deploy web applications and the analytical skills to generate reports and preform inference on datasets.</p>
+          <p>Currently I'm a full-time student. My goal is to put my skills to use in the public health sector; possibly in research of rare and infectious disease
+            or clinical trials of pharmaceuticals. This is why I'm working to receive my Master's degree in Biostatistics.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  <div class="container-left">
+    <mat-card class="basic-card">
+      <mat-card-header>
+        <mat-card-title>
+          What programming languages do I use?
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>In high school I learned Java as my first programming language, so JVM-based languages hold a special place
+          in my heart. I'm experienced with many high and low level programming languages so that at this point learning a new language is matter of
+          memorizing the syntax.</p>
+        <p>At my most recent job on the Blue Cross Blue Shield of Michigan DevOps team I mostly maintain Java Spring
+          microservices systems connected to a variety of different SQL databases. But I'm always learning new things in my free time.
+          Recently, I've picked up Angular for my frontend development, which this site is built with in addition to a
+          Ktor backend connecting to a MongoDB database. </p>
+        <p>For my data science notebooks I generally use Python, but I'm equally familiar with many data mining and
+          machine learning libraries in R. I'm also fluent in SAS but use it only when I have to. I've also been playing
+          with D3.js for creating interactive models on the frontend.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+      <div class="container-right">
+        <mat-card class="basic-card">
+          <mat-card-header>
+            <mat-card-title>
+              PC or Mac?
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Neither. I've been running Linux on all of my personal computers since I was in middle school. In college I
+              started making small changes to the kernel, and today I customize most everything on my OS to
+              maximize my privacy and productivity. Gaming isn't an issue either, I was able to play Elden Ring on my Linux
+              gaming PC straight out of the box with the same performance as Windows. As a developer I'm very particular
+              about the tools I choose to use, and given the choice I will always take Free and Open Source Software.</p>
+              I used to use Arch, but currently I'm running <a href="https://pop.system76.com/" target="_blank">Pop!_OS</a> on all my desktops.
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="container-left">
+        <mat-card class="basic-card">
+          <mat-card-header>
+            <mat-card-title>
+              What are some other facts about you?
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="list-right" style="padding-left: 7px">
+              <li>Received the <a href="https://presidentialserviceawards.gov/" target="_blank">President's Volunteer Service Award</a> for volunteering at my library</li>
+              <li>High school cross country mileage record for running 1069 miles in 91 days</li>
+              <li>Lead webmaster of my high school newspaper</li>
+              <li>I've completed 2 full marathons and 14 half-marathons</li>
+              <li>Previous treasurer and founding member of the Ping Pong Club @ EMU</li>
+              <li>Implemented a music catalog application for a public radio station</li>
+              <li>I've seen the band Pigeons Playing Ping Pong live 5 times</li>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <br/>
+    </div>
+    <br/>
+    <div class="container">
+      <p>Thanks for visiting my site.<br/>
+        <small>Last updated 01/13/2023</small></p>
+    </div>
+    <br/><br/><br/><br/>
+  </div>
+</div>
+<footer class="footer font-small text-center">
+  <div class="container">
+    <ul class="list-unstyled list-inline text-center" style="display: inline;">
+      <ul class="list-inline-item">
+        <a href="https://www.linkedin.com/in/mitchell-henschel-2980a911b/" target="_blank">
+          <img src="assets/img/LI-Logo.png" alt="LinkedIn"/>
+        </a>
+      </ul>
+      <ul class="list-inline-item">
+        <a href="https://github.com/Elkip" target="_blank">
+          <img src="assets/img/Github.png" alt="GitHub"/>
+        </a>
+      </ul>
+      <ul class="list-inline-item">
+        <a href="https://codewars.com/users/Elkip" target="_blank">
+          <img src="assets/img/codewars.png" alt="CodeWars" class="img-responsive"/>
+        </a>
+      </ul>
+    </ul>
+  </div>
+</footer>

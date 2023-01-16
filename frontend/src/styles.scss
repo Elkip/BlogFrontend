@@ -1,0 +1,33 @@
+@import "assets/css/variables";
+@import "bootstrap";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.body {
+  position:relative;
+  background: linear-gradient(00deg, rgb(2, 37, 52) 0%, rgb(9, 79, 110) 100%);
+  color: #d6e8ee;
+  text-align:center;
+}
+
+a:link {
+  color: #a0a4a0;
+}
+
+a:visited {
+  color: #9ca0d3;
+}
+
+a:hover {
+  color: #3882da;
+}
+
+a:active {
+  color: #177580;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

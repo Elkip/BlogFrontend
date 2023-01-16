@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+* {
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  color: white;
+  background-color: gray;
+}
+
+li {
+  margin: .3rem 0;
+}
+
+.list-right {
+  flex: 1;
+  text-align: start;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  bottom: 0;
+  z-index: 999;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 80%;
+}
+
+.container-left {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.container-right {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  width: 75%;
+}
+
+:host ::ng-deep .mat-tab-group {
+  height: 28rem;
+}
+
+:host ::ng-deep .mat-tab-header {
+  border-bottom: none;
+  overflow-x: scroll !important;
+}
+
+:host ::ng-deep .mat-tab-labels {
+  flex-direction: row;
+}
+
+:host ::ng-deep .mat-tab-label {
+  font-size: 1rem;
+  color: #ffffff;
+  padding-bottom: .2rem;
+}
+
+:host ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar{
+  background: #052751;
+  height: 80%;
+}
+
+:host ::ng-deep .mat-ink-bar {
+  opacity: 25%;
+}
+
+:host ::ng-deep .mat-tab-body-wrapper {
+  flex: 1 1 auto;
+}
+
+mat-card.basic-card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background: #2B2B2B;
+  max-width: 549px;
+  margin: 1rem;
+  padding: 10px !important;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+mat-card-title {
+  font: 1.75rem 'Helvetica Neue';
+  color: #72E0D1;
+}
+
+mat-card-content {
+  color: #FFFFFF;
+}
+
+.resume-title {
+  display: flex;
+  text-align: start;
+  font-family: Roboto, monospace;
+  font-size: 2rem;
+  font-variant: all-small-caps;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0px #055142, 3px 3px 0px #054D51, 6px 6px 0px #090551;
+  padding: 2rem;
+}
+
+.skills-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: start;
+  list-style-position: inside;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.skills-content {
+  padding-top: .5rem;
+}
+.skills-content ul{
+  font-size: 1.5rem;
+}
+
+.resume-header {
+  display: flex;
+  padding-left: .3rem;
+  font: 1.75rem 'Helvetica Neue';
+  align-items: flex-start;
+}
+
+.resume-subheader {
+  display: flex;
+  padding-left: .3rem;
+  padding-bottom: .3rem;
+  align-items: flex-start;
+}
+
+.resume-content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-align: start;
+  list-style-position: inside;
+  padding-left: .25rem;
+  height: 100%;
+}
+
+.education {
+  display: flex;
+  flex-flow: column;
+  text-align: start;
+  font-size: 1.5rem;
+  font-weight: 100;
+  padding-left: 3rem;
+  line-height: 2rem;
+}
+
+.education-content {
+  display: inline-flex;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 10;
+}
+
+li {
+  display: list-item;
+  list-style-type: circle;
+}
+
+.coolBeans {
+  border: 2px solid currentColor;
+  border-radius: 1rem;
+  color: #656565;
+  font-family: Roboto;
+  font-size: 2rem;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+.coolBeans::after {
+  background-color: #546060;
+  border-radius: 1rem;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.coolBeans:hover::after {
+  transform: translate(0, 0);
+}
+.coolBeans:hover {
+  border: 2px solid transparent;
+  color: #0523af;
+  transform: scale(1.05);
+  will-change: transform;
+}

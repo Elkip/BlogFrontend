@@ -1,0 +1,70 @@
+@import 'src/assets/css/variables';
+
+* {
+  outline: none;
+}
+
+body {
+  background: $bodycolor;
+  font-family: $bodyfont;
+  margin: 0;
+  overflow-x: hidden;
+  color: $bodytext;
+  font-weight: 300;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background: $white;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a.link {
+  color: $headingtext;
+  &:hover,
+  &:focus {
+    color: $themecolor;
+  }
+}
+a.white-link{
+  color: $white;
+  &:hover,
+  &:focus {
+    color: $dark;
+  }
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.img-rounded {
+  border-radius: $radius;
+}
+
+html body .mdi:before,
+html body .mdi-set {
+  line-height: initial;
+}
+
+.pointer {
+  cursor: pointer;
+}
+/*
+.full-background {
+  background-color: $gray-800;
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 10rem;
+}*/
+
+#mainNav .btn {
+  font-size: 0.75rem;
+  padding: 0.75rem 1rem;
+}

@@ -1,0 +1,33 @@
+<div class="body" style="min-height: 100%">
+  <div class="text-white-50" *ngIf="submitted"><H2>{{loadingStatus}}</H2></div>
+  <div class="form" *ngIf="!submitted">
+    <h2>Messages are sent directly to me using the form below. I am currently open to employment offers! </h2>
+    <form [formGroup]="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Sample McPerson" formControlName="name">
+          <div class="alert alert-danger" *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].dirty">Name Must Be Between 1 and 30 Characters. Name Must Not Start or End with Spaces</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" placeholder="sample@email.com" formControlName="email">
+          <div class="alert alert-danger" *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].dirty">Email Not Valid</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="message">Message <br>(255 Character Max)</label>
+          <input type="text" class="form-control" id="message" placeholder="Hello!" formControlName="msg">
+          <div class="alert alert-danger" *ngIf="contactForm.controls['msg'].invalid && contactForm.controls['msg'].dirty">Message Must Be Between 1 and 255 Characters</div>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="contactForm.invalid">Send</button>
+      </div>
+      <br/><br/><br/><br/>
+    </form>
+  </div>
+</div>

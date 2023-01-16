@@ -1,0 +1,20 @@
+version: '3'
+
+# alternative to docker-compose:
+# docker build -t custom/blog-backend .
+# docker run -d --env-file settings.env -p 8443:8443 -v /mnt/user0/data/docker/backend/:/app/ --name blog-backend custom/blog-backend --extra-hosts host.docker.internal:host-gateway
+
+services:
+  backend:
+    container_name: blog-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app/
+    env_file:
+      - ./settings.env
+    ports:
+      - "8443:8443"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
