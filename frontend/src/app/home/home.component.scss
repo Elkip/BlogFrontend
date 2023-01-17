@@ -6,8 +6,13 @@
 }
 
 body {
-  margin:0;
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  justify-content: center;
+  background-color:darken(#252B37, 10%);
 }
+
 h1 {
   font-family: 'Lato', sans-serif;
   font-weight:300;
@@ -19,4 +24,77 @@ p {
   letter-spacing: 1px;
   font-size:14px;
   color: #a39e9e;
+}
+
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: $y;
+    left: $x;
+    right: 0;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale($size);
+    -webkit-filter: blur($spread);
+    -moz-filter: blur($spread);
+    -ms-filter: blur($spread);
+    filter: blur($spread);
+    background: linear-gradient(270deg, $colorA, $colorB);
+    background-size: 200% 200%;
+    animation: animateGlow $duration ease infinite;
+
+    @keyframes animateGlow {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+  }
+}
+
+.cloud-glow {
+  display: inline-block;
+  position: relative;
+  padding-top: 4rem;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  border-radius: 10rem;
+  animation: textColor 10s ease infinite;
+  @include backlight(2vw, 10vw, 5vw, 0.75, #ff8100, #ffa700, 10s);
+}
+
+.heading{
+  transition: color 200ms;
+  padding-left: .5rem;
+  @keyframes textColor {
+    0% {
+      color: #036091;
+    }
+    50% {
+      color: #16498a;
+    }
+    100% {
+      color: #062b79;
+    }
+  }
+}
+
+[data-type=white_2]:before{
+  z-index: -1;
+  content: "";
+  display: block;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  top: inherit;
+  left: inherit;
+  background-color: #B4C7CF;
+  border-radius: 15rem;
+  position: absolute;
+  outline: 1px solid #B4C7CF;
+  border: 1px solid #B4C7CF;
+  // x, y, ?, size? color
+  box-shadow: 4rem -.8rem 0 2rem #B4C7CF, 21rem -.5rem 0 1rem #B4C7CF, 13rem -2rem 0 3rem #B4C7CF;
 }
