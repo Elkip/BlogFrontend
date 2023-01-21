@@ -17,7 +17,7 @@ h1 {
   font-family: 'Lato', sans-serif;
   font-weight:300;
   letter-spacing: 2px;
-  font-size:48px;
+  font-size: 3rem;
 }
 p {
   font-family: 'Lato', sans-serif;
@@ -45,11 +45,11 @@ p {
     background: linear-gradient(270deg, $colorA, $colorB);
     background-size: 200% 200%;
     animation: animateGlow $duration ease infinite;
-
+    border-radius: 10rem;
     @keyframes animateGlow {
-      0%{background-position:0% 50%}
+      0%{background-position:0 50%}
       50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
+      100%{background-position:0 50%}
     }
   }
 }
@@ -57,12 +57,12 @@ p {
 .cloud-glow {
   display: inline-block;
   position: relative;
-  padding-top: 4rem;
+  padding-top: 10rem;
   text-align: center;
   background-color: rgba(0,0,0,0);
-  border-radius: 10rem;
+  border-radius: 5rem;
   animation: textColor 10s ease infinite;
-  @include backlight(0vw, 7vw, 5vw, 0.75, #ff8100, #ffa700, 10s);
+  @include backlight(0vw, 16vw, 3vw, 0.75, #ff8100, #ffa700, 10s);
 }
 
 .heading{
