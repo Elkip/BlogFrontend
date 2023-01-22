@@ -62,7 +62,7 @@ p {
   background-color: rgba(0,0,0,0);
   border-radius: 5rem;
   animation: textColor 10s ease infinite;
-  @include backlight(0vw, 16vw, 3vw, 0.75, #ff8100, #ffa700, 10s);
+  @include backlight(0vw, 10rem, 3vw, 0.75, #ff8100, #ffa700, 10s);
 }
 
 .heading{
