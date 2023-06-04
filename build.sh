@@ -1,10 +1,5 @@
-# Build and Package the backend (Ktor) and frontend (Angular)
+# Build frontend (Angular)
 
-function buildBackend() {
-  cd backend || exit
-  ./gradlew clean build tgz
-  cp dist/backend.tgz ../dist
-}
 
 function buildFrontend() {
   cd ../frontend/dist || exit
@@ -12,6 +7,4 @@ function buildFrontend() {
   tar -cvzf ../../dist/frontend.tgz ./frontend/
 }
 
-buildBackend
 buildFrontend
-#scp dist/backend.tgz unraid:/tmp/
