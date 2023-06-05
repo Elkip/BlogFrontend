@@ -1,7 +1,6 @@
 .gradle
-/backend/build/
-/frontend/dist/
-/frontend/.angular/cache
+/dist/
+.angular/cache
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -23,7 +22,7 @@ gradle-app.setting
 /bazel-out
 
 # dependencies
-/frontend/node_modules
+node_modules
 
 # profiling files
 chrome-profiler-events*.json
