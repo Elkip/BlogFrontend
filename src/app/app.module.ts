@@ -13,10 +13,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import {NgOptimizedImage} from '@angular/common';
 
 const routes: Routes = [
   { path : '', component : HomeComponent },
@@ -24,7 +24,6 @@ const routes: Routes = [
   { path : 'portfolio', component : PortfolioComponent },
   { path : 'blog', component : BlogComponent },
   { path : 'about', component : AboutComponent },
-  { path : 'login', component : LoginComponent },
   { path : '404', component : PageNotFoundComponent },
   { path : '**', redirectTo : '/404' }
 ];
@@ -38,8 +37,7 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     PortfolioComponent,
-    PageNotFoundComponent,
-    LoginComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +49,8 @@ const routes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,11 @@
 <div class="header">
-  <div class="login-button">
-    <button (click)="navigateToAdmin()">Login</button>
-  </div>
-
 
   <div class="container">
     <nav class="navbar navbar-expand-sm fixed-top" role="navigation"
          style="background-color: rgba(45,47,47,0.87);">
 
-      <a class="navbar-brand" (click)="navigateToHome()"><img src="assets/img/MH_Logo.png" alt="Homepage" class="img-responsive"></a><br><br>
+      <a class="navbar-brand" (click)="navigateToHome()"><img ngSrc="assets/img/MH_Logo.png" alt="Homepage" class="img-responsive"
+                                                              height="100" width="100"></a><br><br>
 
       <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,9 +22,9 @@
           <li class="nav-item">
             <a class="nav-link link" (click)="navigateToContact()">CONTACT</a>
           </li>
-<!--          <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link link" (click)="navigateToBlog()">BLOG</a>
-          </li>-->
+          </li>
         </ul>
       </div>
     </nav>
