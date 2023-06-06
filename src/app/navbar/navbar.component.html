@@ -1,7 +1,6 @@
 <div class="header">
   <div class="login-button">
-    <button (click)="navigateToAdmin()">{{ isLoggedIn ? 'Admin' : 'Login' }}</button>
-    <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+    <button (click)="navigateToAdmin()">Login</button>
   </div>
 
 
@@ -26,6 +25,9 @@
           <li class="nav-item">
             <a class="nav-link link" (click)="navigateToContact()">CONTACT</a>
           </li>
+<!--          <li class="nav-item">
+            <a class="nav-link link" (click)="navigateToBlog()">BLOG</a>
+          </li>-->
         </ul>
       </div>
     </nav>

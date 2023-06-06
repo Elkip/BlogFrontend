@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  restUrl: 'https://api.lonelymountain.xyz'
+  blogUrl: 'http://localhost:8080'
 };
 
 /*

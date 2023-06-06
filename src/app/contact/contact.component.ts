@@ -18,7 +18,6 @@ export class ContactComponent implements OnInit, OnDestroy {
   submitted = false;
   retryAttempts = 0;
   loadingStatus: string;
-  dataLoaded = false;
 
   constructor(private formBuilder: UntypedFormBuilder,
               private dataService: DataService,

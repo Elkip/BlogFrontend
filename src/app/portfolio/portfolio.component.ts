@@ -22,6 +22,8 @@ export class PortfolioComponent implements OnInit {
     this.modals.push(document.getElementById('modal_8'));
     this.modals.push(document.getElementById('modal_9'));
     this.modals.push(document.getElementById('modal_10'));
+    this.modals.push(document.getElementById('modal_11'));
+    this.modals.push(document.getElementById('modal_12'));
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = event => {
       if (this.modals.includes(event.target)) {
