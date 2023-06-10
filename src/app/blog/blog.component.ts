@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {environment} from '../../environments/environment';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  blogSrc: SafeResourceUrl;
+  constructor(private sanitizer: DomSanitizer) {
+    this.blogSrc = this.sanitizer.bypassSecurityTrustResourceUrl(environment.blogUrl);
+  }
 
   ngOnInit(): void {
   }

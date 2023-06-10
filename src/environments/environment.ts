@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  blogUrl: 'http://localhost:8080'
+  blogUrl: 'http://localhost:8080',
+  apiUrl: 'https://localhost:8081'
 };
 
 /*

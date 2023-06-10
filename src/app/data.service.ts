@@ -14,7 +14,7 @@ export class DataService {
     console.table(message);
     const correct = { name: message.name, email: message.email, message: message.message };
     console.table(correct);
-    return this.http.post<any>(environment.blogUrl + '/contact/send', correct);
+    return this.http.post<any>(environment.apiUrl + '/contact/send', correct);
   }
 
   constructor(private http: HttpClient) {
