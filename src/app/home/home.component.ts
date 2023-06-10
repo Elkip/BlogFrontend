@@ -13,13 +13,11 @@ export class HomeComponent implements OnInit {
     const body = document.body;
     const box = document.getElementById('box');
     const mouseHandler = e => {
-      const docW = body.clientWidth / 1.1;
+      const docW = body.clientWidth / 4;
       const docH = body.clientHeight / 2;
-      const moveX = (e.clientX - docW) / 6;
-      const moveY = (e.clientY - docH) / 6;
+      const moveX = (e.clientX - docW) / 3;
+      const moveY = (e.clientY - docH) / 3;
       box.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
-      // box.style.transform += 'rotateX(' + -moveY / 2 + 'deg)';
-      // box.style.transform += 'rotateY(' + moveX / 2 + 'deg)';
     };
     body.addEventListener('mousemove', mouseHandler, false);
   }
