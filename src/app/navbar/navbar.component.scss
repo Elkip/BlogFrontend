@@ -23,15 +23,6 @@ p {
   color: #333333;
 }
 
-.login-button {
-  display:block;
-  color: white;
-  text-align:center;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-
 .header {
   background:  #ffffff;
   color: #ffffff;
@@ -88,7 +79,6 @@ p {
 }
 
 /* Animation */
-
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
 }
@@ -337,7 +327,6 @@ p {
   padding-left: 0rem;
   margin-bottom: 0;
 }
-
 
 .navbar-nav .nav-link {
   padding-right: 0;
