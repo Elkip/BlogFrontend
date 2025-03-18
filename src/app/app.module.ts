@@ -14,8 +14,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
+import { MatTabsModule } from '@angular/matabs';
+import { MatCardModule } from '@angular/material/card';
 import {NgOptimizedImage} from '@angular/common';
 
 const routes: Routes = [
@@ -48,7 +48,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     BrowserAnimationsModule,
-    MatTabsModule,
+TabsModule,
     MatCardModule,
     NgOptimizedImage
   ],
