@@ -12,7 +12,7 @@ import { BlogComponent } from './blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/matabs';
 import { MatCardModule } from '@angular/material/card';
@@ -28,31 +28,24 @@ const routes: Routes = [
   { path : '**', redirectTo : '/404' }
 ];
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    BlogComponent,
-    AboutComponent,
-    ContactComponent,
-    PortfolioComponent,
-    PageNotFoundComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes),
-    FormsModule,
-    BrowserAnimationsModule,
-TabsModule,
-    MatCardModule,
-    NgOptimizedImage
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        NavbarComponent,
+        HomeComponent,
+        BlogComponent,
+        AboutComponent,
+        ContactComponent,
+        PortfolioComponent,
+        PageNotFoundComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        ReactiveFormsModule,
+        RouterModule.forRoot(routes),
+        FormsModule,
+        BrowserAnimationsModule,
+        TabsModule,
+        MatCardModule,
+        NgOptimizedImage], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
