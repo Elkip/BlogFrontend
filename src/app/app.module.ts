@@ -14,9 +14,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule } from '@angular/matabs';
-import { MatCardModule } from '@angular/material/card';
+import { MatCardModule, MatCardHeader } from '@angular/material/card';
 import {NgOptimizedImage} from '@angular/common';
+import { MatTab, MatTabGroup, MatTabContent, MatTabsModule } from '@angular/material/tabs';
 
 const routes: Routes = [
   { path : '', component : HomeComponent },
@@ -45,7 +45,7 @@ const routes: Routes = [
         RouterModule.forRoot(routes),
         FormsModule,
         BrowserAnimationsModule,
-        TabsModule,
+        MatTabsModule,
         MatCardModule,
-        NgOptimizedImage], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        NgOptimizedImage, MatTabGroup, MatTab], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
