@@ -64,24 +64,29 @@ p {
   text-align: center;
   background-color: rgba(0,0,0,0);
   border-radius: 5rem;
+  isolation: isolate;
   @include backlight(0vw, 10rem, 3vw, 0.75, #ff8100, #ffa700, 10s);
 }
 
 .heading{
   padding-left: .5rem;
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
 
   h1 {
     color: #036091;
     line-height: 1.3;
     padding-bottom: 0.2em;
+    display: block;
 
     @supports (-webkit-background-clip: text) or (background-clip: text) {
       background: linear-gradient(270deg, #036091, #100523, #062b79);
       background-size: 200% 200%;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       background-clip: text;
-      color: transparent;
+      -webkit-text-fill-color: transparent;
+      will-change: background-position;
       animation: textColor 10s ease infinite;
     }
   }
