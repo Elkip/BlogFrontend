@@ -71,17 +71,19 @@ p {
   padding-left: .5rem;
 
   h1 {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
+    color: #036091;
     line-height: 1.3;
     padding-bottom: 0.2em;
-    background: linear-gradient(270deg, #036091, #100523, #062b79);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: textColor 10s ease infinite;
+
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      background: linear-gradient(270deg, #036091, #100523, #062b79);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      animation: textColor 10s ease infinite;
+    }
   }
 
   @keyframes textColor {
