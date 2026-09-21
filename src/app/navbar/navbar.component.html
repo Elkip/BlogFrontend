@@ -1,30 +1,27 @@
 <div class="header">
 
   <div class="container">
-    <nav class="navbar navbar-expand-sm fixed-top" role="navigation"
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" role="navigation"
          style="background-color: rgba(45,47,47,0.87);">
 
-      <a class="navbar-brand" (click)="navigateToHome()"><img ngSrc="assets/img/MH_Logo.png" alt="Homepage" class="img-responsive"
-                                                              height="100" width="100"></a><br><br>
+      <a class="navbar-brand" (click)="navigateToHome()" style="cursor: pointer;"><img ngSrc="assets/img/MH_Logo.png" alt="Homepage" class="img-responsive"
+                                                              height="100" width="100"></a>
 
-      <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="collapsibleNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div [(ngbCollapse)]="navbarCollapsed" class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link link" (click)="navigateToAbout()">ABOUT</a><br>
+            <a class="nav-link link" (click)="navigateToAbout()" style="cursor: pointer;">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link" (click)="navigateToPortfolio()">PORTFOLIO</a><br>
+            <a class="nav-link link" (click)="navigateToPortfolio()" style="cursor: pointer;">PORTFOLIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link" (click)="navigateToContact()">CONTACT</a>
+            <a class="nav-link link" (click)="navigateToContact()" style="cursor: pointer;">CONTACT</a>
           </li>
-<!--          <li class="nav-item">
-            <a class="nav-link link" (click)="navigateToBlog()">BLOG</a>
-          </li>-->
         </ul>
       </div>
     </nav>

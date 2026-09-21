@@ -1,6 +1,23 @@
+.form {
+  padding: 1rem;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
 form {
-  margin-left:auto;
-  margin-right:auto;
-  width:200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 450px;
+  padding: 0 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
 }
 
