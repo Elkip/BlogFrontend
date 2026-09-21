@@ -9,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  modals = [];
+  modals: (HTMLElement | null)[] = [];
 
   constructor() { }
 
@@ -27,9 +27,10 @@ export class PortfolioComponent implements OnInit {
     this.modals.push(document.getElementById('modal_11'));
     this.modals.push(document.getElementById('modal_12'));
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = event => {
-      if (this.modals.includes(event.target)) {
-        (event.target).style.display = 'none';
+    window.onclick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (target && this.modals.includes(target)) {
+        target.style.display = 'none';
       }
     };
   }

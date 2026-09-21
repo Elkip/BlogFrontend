@@ -1,5 +1,7 @@
 export class Login {
-  name: string;
-  email: string;
-  role: string;
+  constructor(
+      public name: string,
+      private email: string,
+      private role: string
+  ) {}
 }

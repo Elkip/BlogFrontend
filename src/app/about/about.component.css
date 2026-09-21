@@ -62,38 +62,6 @@ li {
   width: 75%;
 }
 
-:host ::ng-deep .mat-tab-group {
-  height: 28rem;
-}
-
-:host ::ng-deep .mat-tab-header {
-  border-bottom: none;
-  overflow-x: scroll !important;
-}
-
-:host ::ng-deep .mat-tab-labels {
-  flex-direction: row;
-}
-
-:host ::ng-deep .mat-tab-label {
-  font-size: 1rem;
-  color: #ffffff;
-  padding-bottom: .2rem;
-}
-
-:host ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar{
-  background: #052751;
-  height: 80%;
-}
-
-:host ::ng-deep .mat-ink-bar {
-  opacity: 25%;
-}
-
-:host ::ng-deep .mat-tab-body-wrapper {
-  flex: 1 1 auto;
-}
-
 mat-card.basic-card {
   display: flex;
   flex-flow: column;

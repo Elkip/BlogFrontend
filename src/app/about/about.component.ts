@@ -8,11 +8,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
     standalone: false
 })
 export class AboutComponent implements OnInit {
-
-  resume: HTMLElement;
-  btn: HTMLElement;
-
-  constructor() { }
+  resume: HTMLElement | null = null;
+  btn: HTMLElement | null = null;
 
   ngOnInit(): void {
     this.resume = document.getElementById('resume');
@@ -20,6 +17,7 @@ export class AboutComponent implements OnInit {
   }
 
   hideResume(): void {
+    if (!this.resume || !this.btn) return;
     if (this.resume.style.display === 'none') {
       this.resume.style.display = 'block';
       this.btn.innerText = 'Hide Resume';

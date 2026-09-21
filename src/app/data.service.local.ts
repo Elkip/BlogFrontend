@@ -28,18 +28,9 @@ export class DataService {
 
   constructor() {
     this.messages = new Array<Contact>();
-    const mes1 = new Contact();
-    mes1.id = '1';
-    mes1.message = 'Hello World!';
-    mes1.email = 'Hello@World.com';
-    mes1.name = 'Mr. Worldwide';
+    const mes1 = new Contact('1', 'Hello World!', 'Hello@World.com', 'Mr. Worldwide', 9);
     this.messages.push(mes1);
-
-    const mes2 = new Contact();
-    mes2.id = '2';
-    mes2.message = 'F*** Off';
-    mes2.email = 'YoloMcSwaggins@yo.com';
-    mes2.name = 'Ur Mom';
+    const mes2 = new Contact('2', 'F*** Off', 'YoloMcSwaggins@yo.com', 'Ur Mom', 0);
     this.messages.push(mes2);
   }
 }

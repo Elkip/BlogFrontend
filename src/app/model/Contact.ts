@@ -1,8 +1,10 @@
 export class Contact {
-  id: string;
-  name: string;
-  email: string;
-  message: string;
-  ip: number;
+  constructor(
+    public id: string,
+    public name: string,
+    public email: string,
+    public message: string,
+    public ip: number
+  ) {}
 }
 

@@ -16,26 +16,28 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   message: Contact;
   contactForm: UntypedFormGroup;
-  resetEventSubscription: Subscription;
+  resetEventSubscription: Subscription | undefined;
   submitted = false;
   retryAttempts = 0;
-  loadingStatus: string;
+  loadingStatus = '';
 
   constructor(private formBuilder: UntypedFormBuilder,
               private dataService: DataService,
-              private formResetService: FormResetService) { }
+              private formResetService: FormResetService) {
+    this.message = new Contact('', '', '', '', 0);
+    this.contactForm = this.initializeForm();
+    this.resetEventSubscription = undefined;
+  }
 
   ngOnInit(): void {
-    this.initializeForm();
     this.resetEventSubscription = this.formResetService.resetContactFormEvent.subscribe(msg =>   {
         this.message = msg;
         this.initializeForm();
     });
   }
 
-  initializeForm(): void {
-    this.message = new Contact();
-    this.contactForm = this.formBuilder.group({
+  initializeForm(): UntypedFormGroup {
+    return this.formBuilder.group({
       name : [this.message.name, [Validators.required, Validators.pattern('^([A-Za-z0-9\\\\\\/_\\-]|([A-Za-z0-9\\\\\\/_\\-][A-Za-z0-9\\\\\\/_\\- ]{0,28}[A-Za-z0-9\\\\\\/_\\-]))$')]],
       email : [ this.message.email, [Validators.email, Validators.required ] ],
       msg : [ this.message.message, [Validators.required, Validators.maxLength(255)]]
@@ -43,7 +45,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.resetEventSubscription.unsubscribe();
+    this.resetEventSubscription?.unsubscribe();
   }
 
   onSubmit(): void {

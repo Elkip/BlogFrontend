@@ -1,5 +1,6 @@
-@import "assets/css/variables";
-@import "bootstrap";
+@use "assets/css/variables" as *;
+/* Importing Bootstrap SCSS file. */
+@use 'bootstrap/scss/bootstrap';
 
 html, body {
   margin: 0;
@@ -32,5 +33,36 @@ a:active {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+.mat-tab-group {
+  height: 28rem;
+}
+
+.mat-tab-header {
+  border-bottom: none;
+  overflow-x: scroll !important;
+}
+
+.mat-tab-labels {
+  flex-direction: row;
+}
+
+.mat-tab-label {
+  font-size: 1rem;
+  color: #ffffff;
+  padding-bottom: .2rem;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar{
+  background: #052751;
+  height: 80%;
+}
+
+.mat-ink-bar {
+  opacity: 25%;
+}
+
+.mat-tab-body-wrapper {
+  flex: 1 1 auto;
+}
+
+
