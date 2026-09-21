@@ -12,7 +12,7 @@ import { BlogComponent } from './blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatCardHeader } from '@angular/material/card';
 import {NgOptimizedImage} from '@angular/common';
@@ -47,5 +47,5 @@ const routes: Routes = [
         BrowserAnimationsModule,
         MatTabsModule,
         MatCardModule,
-        NgOptimizedImage, MatTabGroup, MatTab], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        NgOptimizedImage, MatTabGroup, MatTab], providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class AppModule { }
