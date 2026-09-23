@@ -32,16 +32,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.navigate(['portfolio']);
   }
 
-  navigateToBlog(): void {
-    this.router.navigate(['blog']);
-  }
-
   navigateToContact(): void {
     this.router.navigate(['contact']);
-  }
-
-  navigateToAdmin(): void {
-    this.router.navigate(['login']);
   }
 
 }
